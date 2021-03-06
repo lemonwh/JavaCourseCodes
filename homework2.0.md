@@ -47,6 +47,20 @@
 4. 30-尝试使用ByteBuddy实现一个简单的基于类的AOP
 5. 30-尝试使用ByteBuddy与Instrument实现一个简单JavaAgent实现无侵入下的AOP
 
+4. v4.0-功能全面：增加多种策略（各条之间没有关系，可以任意选择实现），基于TCP实现server->client，从而实现 PUSH模式
+- 考虑实现消息过期，消息重试，消息定时投递等策略
+- 考虑批量操作，包括读写，可以打包和压缩
+- 考虑消息清理策略，包括定时清理，按容量清理、LRU等
+- 考虑消息持久化，存入数据库，或WAL日志文件，或BookKeeper
+- 考虑将spring mvc替换成netty下的tcp传输协议，rsocket/websocket
+
+5. v5.0-优化完善：对接各种技术（各条之间没有关系，可以任意选择实现）
+- 考虑封装 JMS 1.1 接口规范
+- 考虑实现 STOMP 消息规范
+- 考虑实现消息事务机制与事务管理器
+- 对接Spring
+- 对接Camel或Spring Integration
+- 优化内存和磁盘的使用
 #### 4.2 Spring ORM
 
 1. 基于AOP和自定义注解，实现@MyCache(60)对于指定方法返回值缓存60秒
@@ -195,3 +209,6 @@
 - 对接Spring
 - 对接Camel或Spring Integration
 - 优化内存和磁盘的使用
+
+
+### 10.开始做作业
